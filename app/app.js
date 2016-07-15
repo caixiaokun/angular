@@ -5,12 +5,17 @@
     // 在这里我们开始创建主模块
     var app = angular.module('moviecat',[
         // 在主模块中引用的时候，路由规则是先引用，先匹配
+        'moviecat.us_box',
         'moviecat.home_page',   // /home_page
         'moviecat.details',   // /deatails/:id
         'moviecat.movie_list',   // /:movieType/:page
-        //'moviecat.auto-active',  //
+        'moviecat.auto-active' //
     ]);
-
+     app.config(['$routeProvider', function ($routeProvider) {
+         $routeProvider.otherwise({
+             redirectTo:'/home_page'
+         })
+    }])
     //创建控制
     app.controller('mainController',['$scope','$location',function($scope,$location){
         $scope.query='';

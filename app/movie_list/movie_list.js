@@ -1,9 +1,3 @@
-/*
- * @Author: huoqishi
- * @Date:   2016-07-02 17:00:17
- * @Last Modified by:   huoqishi
- * @Last Modified time: 2016-07-04 16:13:16
- */
 
 (function(angular){
     // 1.创建正在热映模块
@@ -37,9 +31,9 @@
             var start = (page-1)*count;// 这个表示从第几条数据开始请求
             var totalPage= 0;
             // 需要动态改变的是这个url,最后一部分
-            var url ='http://api.douban.com/v2/movie/'+$routeParams.movieType+'?q='+$routeParams.q;
+            var url ='http://api.douban.com/v2/movie/'+$routeParams.movieType;
             MyService.jsonp(url,
-                {start:start,count:count},function(data){
+                {start:start,count:count,q:$routeParams.q},function(data){
                     $scope.data=data;
                     console.log(data);
                     // 告诉angular,数据模型已经发生改变，需要你去同步一下，紧接着给$scope赋值的语句后面

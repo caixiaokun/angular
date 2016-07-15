@@ -8,7 +8,7 @@ body {
 }
 
 .top .header {
-    background: #fff;
+    background: rgba(166, 173, 162, 0.61);
 }
 
 .top .header a {
@@ -45,8 +45,10 @@ body {
     width: 80px;
     height: 30px;
     border: none;
-    background: #07A7E1;
+    background: #2189e1;
     color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -95,7 +97,34 @@ body {
     width: 1080px;
     overflow: hidden;
 }
+/*homeҳ�濪ʼ*/
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.home-page{
+    width: 980px;
+    margin: 0 auto;
 
+    /*background: red;*/
+}
+.banner-img{
+    margin-top: 20px ;
+    margin-left: 40px;
+    width: 891px;
+    /*overflow: hidden;*/
+}
+.banner-img ul{
+    width: 2673px;
+}
+.banner-img ul li{
+    float: left;
+}
 .container .list ul li {
     margin: 12px 5px;
     padding: 4px;

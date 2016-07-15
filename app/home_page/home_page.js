@@ -2,13 +2,20 @@
  * Created by Administrator on 2016/7/4.
  */
 (function(angular){
-    // 1.创建首页的模块
+    // 1.麓麓陆篓脢脳脪鲁碌脛脛拢驴茅
     var app = angular.module('moviecat.home_page',['ngRoute']);
 
-    // 2.给定一个路由规则
+    // 2.赂酶露篓脪禄赂枚脗路脫脡鹿忙脭貌
     app.config(['$routeProvider',function($routeProvider){
         $routeProvider.when('/home_page',{
-            templateUrl:'./home_page/view.html'
+            templateUrl:'./home_page/view.html',
+            // controller:'home_pageController'
         })
     }])
+ //      app.controller('home_pageController',[
+ //       	var mySwiper = new Swiper('#SW-c',{
+	// 	autoplay : 2000,
+	// 	initialSlide :2,
+	// })
+ //    ])
 })(angular)
